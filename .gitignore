@@ -1,0 +1,22 @@
+# configure
+
+Makefile
+bc/.deps/
+bc/Makefile
+config.h
+config.log
+config.status
+dc/.deps/
+dc/Makefile
+doc/Makefile
+doc/texi-ver.incl
+lib/.deps/
+lib/Makefile
+stamp-h1
+
+# build
+bc/bc
+bc/libmath.h
+dc/dc
+*.o
+*.a
