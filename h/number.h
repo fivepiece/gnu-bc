@@ -140,4 +140,7 @@ void bc_out_num (bc_num num, int o_base, void (* out_char)(int),
 			     int leading_zero);
 
 void bc_out_long (long val, int size, int space, void (*out_char)(int));
+
+/* recursive base conversion added to util.c */
+long bc_baseconvert(long num, int ibase, int obase);
 #endif

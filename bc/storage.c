@@ -1018,6 +1018,7 @@ process_params (program_counter *progctr, int func)
 	
 		/* Compute source index and make sure some structure exists. */
 		ix = (int) bc_num2long (ex_stack->s_num);
+        ix = (int) bc_baseconvert (ix, 10, o_base);
 		(void) get_array_num (ix, 0);    
 	
 		/* Push a new array and Compute Destination index */

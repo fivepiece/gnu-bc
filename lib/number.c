@@ -1703,6 +1703,15 @@ bc_str2num (bc_num *num, char *str, int scale)
     }
 }
 
+/* recursive base conversion */
+long
+bc_baseconvert(long num, int ibase, int obase){
+  if(num == 0 || num == 1 || (ibase == obase))
+    return num;
+
+  return (num % obase) + (ibase * bc_baseconvert(num / obase, ibase, obase));
+}
+
 /* Debugging routines */
 
 #ifdef DEBUG
